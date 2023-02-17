@@ -40,7 +40,7 @@ const data = await inquirer
     },
     {
         name: 'license',
-        type: 'input',
+        type: 'list',
         message: "What license would you like?",
         choices: ['MIT', 'Apache 2.0', 'GPL', 'none'],
     },
