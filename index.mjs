@@ -18,32 +18,78 @@ const data = await inquirer
         type: 'input',
         message: "What's your email address?",
     },
+    {
+        name: 'description',
+        type: 'input',
+        message: "Please type out the description you would like displayed on the README file.",
+    },
+    {
+        name: 'installation',
+        type: 'input',
+        message: "Please type out your installation ",
+    },
+    {
+        name: 'contributing',
+        type: 'input',
+        message: "Please write out the names of any other contributers you would like to include, separated by commas.",
+    },
+    {
+        name: 'usage',
+        type: 'input',
+        message: "Please add what you would like displayed in the Usage section.",
+    },
+    {
+        name: 'license',
+        type: 'input',
+        message: "What license would you like?",
+        choices: ['MIT', 'Apache 2.0', 'GPL', 'none'],
+    },
+    {
+        name: 'license',
+        type: 'input',
+        message: "What license would you like?",
+        choices: ['MIT', 'Apache 2.0', 'GPL', 'none'],
+    },
 ]);
 
+
+
+function licenseBadge(license){
+
+    if (license != null){
+        return '[License](https://img.shields.io/badge/license-${license}-blue.svg)'
+    }else{
+        return ""
+    }
+
+};
+
 let readMeText = `
-# ${project_name}
+# ${data.project_name}
 
 ## Description
-${description}
+${data.description}
 
 ## Contents
-${table_of_contents}
+${data.table_of_contents}
 
 ## Installation
-${installation}
+${data.installation}
 
 ## Usage
-${usage}
+${data.usage}
 
 ## License
- ${license}
+ ${licenseBadge()}
 
 ## Contrubuting
- ${contributing}
+ ${data.contributing}
 
 ## Tests
- ${tests}
+ ${data.tests}
 
 ## Questions 
-Have any questions? Feel free to email me at ${email} or reach out on on [GitHub](${github_link})!
+Have any questions? Feel free to email me at ${data.email} or reach out on on [GitHub](${data.github_link})!
 `
+
+await fs.writeFile("README.md", readMeText);
