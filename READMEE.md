@@ -87,5 +87,33 @@ You are required to submit the following for review:
 * The URL of the GitHub repository, with a unique name and a README describing the project
 
 ---
+* The title of my project 
+    * Sections entitled:
+      * Description 
+      * Table of Contents 
+      * Installation 
+      * Usage 
+      * License 
+      * Contributing 
+      * Tests 
+      * Questions
 
+## ${project_name}
+
+# Description
+${description}
+# Table of Conents
+${table_of_contents}
+# 
+${installation}
+# 
+${usage}
+#
+ ${license}
+#
+ ${contributing}
+#
+ ${tests}
+#
+ ${questions}
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
