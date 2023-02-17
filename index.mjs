@@ -26,7 +26,7 @@ const data = await inquirer
     {
         name: 'installation',
         type: 'input',
-        message: "Please type out your installation ",
+        message: "Please type out your installation instructions.",
     },
     {
         name: 'contributing',
@@ -57,7 +57,7 @@ const data = await inquirer
 function licenseBadge(license){
 
     if (license != null){
-        return '[License](https://img.shields.io/badge/license-${license}-blue.svg)'
+        return "[License](https://img.shields.io/badge/license-${data.license}-blue.svg)"
     }else{
         return ""
     }
@@ -71,7 +71,13 @@ let readMeText = `
 ${data.description}
 
 ## Contents
-${data.table_of_contents}
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributers](#Contributers)
+* [Tests](#Tests)
+* [Questions](#Questions)
+
 
 ## Installation
 ${data.installation}
@@ -80,7 +86,7 @@ ${data.installation}
 ${data.usage}
 
 ## License
- ${licenseBadge()}
+ ${licenseBadge(data.license)}
 
 ## Contrubuting
  ${data.contributing}
