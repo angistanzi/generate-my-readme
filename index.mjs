@@ -9,16 +9,6 @@ const data = await inquirer
         type: 'input',
     },
     {
-        name: 'github_link',
-        type: 'input',
-        message: "What's your Github link?",
-    },
-    {
-        name: 'email',
-        type: 'input',
-        message: "What's your email address?",
-    },
-    {
         name: 'description',
         type: 'input',
         message: "Please type out the description you would like displayed on the README file.",
@@ -29,11 +19,6 @@ const data = await inquirer
         message: "Please type out your installation instructions.",
     },
     {
-        name: 'contributing',
-        type: 'input',
-        message: "Please write out the names of any other contributers you would like to include, separated by commas.",
-    },
-    {
         name: 'usage',
         type: 'input',
         message: "Please add what you would like displayed in the Usage section.",
@@ -42,13 +27,27 @@ const data = await inquirer
         name: 'license',
         type: 'list',
         message: "What license would you like?",
-        choices: ['MIT', 'Apache 2.0', 'GPL', 'none'],
+        choices: ['MIT', 'Apache 2.0', 'Boost', 'none'],
     },
     {
-        name: 'license',
+        name: 'contributing',
         type: 'input',
-        message: "What license would you like?",
-        choices: ['MIT', 'Apache 2.0', 'GPL', 'none'],
+        message: "Please write out the names of any other contributers you would like to include, separated by commas.",
+    },
+    {
+        name: 'tests',
+        type: 'input',
+        message: "Please write out any tests you ran that you want to be displayed.",
+    },
+    {
+        name: 'github_link',
+        type: 'input',
+        message: "What's your Github link?",
+    },
+    {
+        name: 'email',
+        type: 'input',
+        message: "What's your email address?",
     },
 ]);
 
@@ -56,9 +55,15 @@ const data = await inquirer
 
 function licenseBadge(license){
 
-    if (license != null){
-        return "[License](https://img.shields.io/badge/license-${data.license}-blue.svg)"
-    }else{
+    if (license == "Apache 2.0"){
+        return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    } else if (license == "MIT") {
+        return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    
+    } else if (license == "Boost") {
+
+        return "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
+    } else {
         return ""
     }
 
