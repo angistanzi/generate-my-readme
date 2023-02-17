@@ -5,7 +5,7 @@ const data = await inquirer
 .prompt([
     {
         name: 'project_name',
-        message: "What is the name of your project?",
+        message: "What is the name of your project? (Please type it as you would like it to appear on",
         type: 'input',
     },
     {
@@ -16,12 +16,12 @@ const data = await inquirer
     {
         name: 'installation',
         type: 'input',
-        message: "Please type out your installation instructions.",
+        message: "Please type out your installation instructions that you want to appear.",
     },
     {
         name: 'usage',
         type: 'input',
-        message: "Please add what you would like displayed in the Usage section.",
+        message: "Please add what you would like displayed in the 'Usage' section.",
     },
     {
         name: 'license',
@@ -37,7 +37,7 @@ const data = await inquirer
     {
         name: 'tests',
         type: 'input',
-        message: "Please write out any tests you ran that you want to be displayed.",
+        message: "Are there any tests for this project that you would like to add to the 'Tests' section?",
     },
     {
         name: 'github_link',
@@ -56,13 +56,17 @@ const data = await inquirer
 function licenseBadge(license){
 
     if (license == "Apache 2.0"){
+
         return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    
     } else if (license == "MIT") {
+
         return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
     
     } else if (license == "Boost") {
 
         return "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
+    
     } else {
         return ""
     }
