@@ -2,7 +2,7 @@
 # This Is My README!
 
 ## Description
-This is an example of the repository generated from the command-line app.
+This is an example of a README generated from the command-line app.
 
 ## Contents
 * [Installation](#Installation)
@@ -14,19 +14,19 @@ This is an example of the repository generated from the command-line app.
 
 
 ## Installation
-To install the app, clone the repository from github and run "npm intall" in the terminal.
+To install this app, simply clone the repository from Github, and run "npm install" in the command line
 
 ## Usage
-To use the app, simply run "node index.mjs" in the terminal, and answer the questions when prompted.
+To use the app, respond the questions prompted within the command line after running "node index.mjs"
 
 ## License
  [![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
 
 ## Contrubuting
- Me, Myself, and I! (And of course the amazing instructor and TAs.)
+ Me, Myself, and I!
 
 ## Tests
  N/A
 
 ## Questions 
-Have any questions? Feel free to email me at astanzio14@gmail.com or reach out on on [GitHub](https://github.com/angistanzi)!
+Have any questions? Feel free to email me at astanzio14@gmail.com or reach out on on [GitHub](https://www.github.com/angistanzi)!
