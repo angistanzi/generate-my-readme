@@ -5,7 +5,7 @@ const data = await inquirer
 .prompt([
     {
         name: 'project_name',
-        message: "What is the name of your project? (Please type it as you would like it to appear on the repository",
+        message: "What is the name of your project? (Please type it as you would like it to appear on the repository)",
         type: 'input',
     },
     {
