@@ -107,4 +107,4 @@ ${data.usage}
 Have any questions? Feel free to email me at ${data.email} or reach out on on [GitHub](${data.github_link})!
 `
 
-await fs.writeFile("README.md", readMeText);
+await fs.writeFile("generatedREADME.md", readMeText);
